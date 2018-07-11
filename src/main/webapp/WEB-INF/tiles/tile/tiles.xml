@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+		"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+		"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- 기본 페이지 레이아웃 -->
+	<definition name="layout" template="/WEB-INF/tiles/layout/layout.jsp">
+		<put-attribute name="title" value="TEMPLATE" />
+		<put-attribute name="header" value="/WEB-INF/tiles/tile/pc/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/tile/pc/footer.jsp" />
+		<put-attribute name="wrap" value="" />
+		<put-attribute name="container" value="" />
+		<put-attribute name="header-wrap" value="header-wrap" />
+	</definition>
+
+	<!-- Error 레이아웃 -->
+	<definition name="error_layout" template="/WEB-INF/tiles/layout/error_layout.jsp">
+	</definition>
+
+	<!-- Head 없는 레이아웃 -->
+	<definition name="contents_layout" template="/WEB-INF/tiles/layout/contents_layout.jsp">
+	</definition>
+
+
+
+	<!-- Error 페이지  -->
+	<definition name="error/*" extends="error_layout" >
+		<put-attribute name="content" value="/WEB-INF/jsp/error/{1}.jsp" />
+	</definition>
+	<definition name="error/*/*" extends="error_layout" >
+		<put-attribute name="content" value="/WEB-INF/jsp/error/{1}/{2}.jsp" />
+	</definition>
+
+
+	<!-- login 로그인,로그아웃 -->
+	<definition name="login/*" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/jsp/login/{1}.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/tile/etc/header.jsp" />
+		<put-attribute name="container" value="sub-wrap" />
+		<put-attribute name="wrap" value="" />
+	</definition>
+
+
+	<!-- board 커뮤니티 -->
+	<definition name="board/reply/*" extends="contents_layout">
+		<put-attribute name="content" value="/WEB-INF/jsp/board/reply/{1}.jsp" />
+	</definition>
+	<definition name="board/main/*" extends="contents_layout">
+		<put-attribute name="content" value="/WEB-INF/jsp/board/community/{1}.jsp" />
+	</definition>
+	<definition name="board/*/*" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/jsp/board/{1}/{2}.jsp" />
+		<put-attribute name="wrap" value="" />
+		<put-attribute name="container" value="sub-wrap" />
+	</definition>
+
+
+
+	<!-- 기본 설정 -->
+	<definition name="*/*/*/" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}/{3}.jsp" />
+		<put-attribute name="container" value="" />
+	</definition>
+	<definition name="*/*/" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/jsp/{1}/{2}/index.jsp" />
+		<put-attribute name="container" value="" />
+	</definition>
+	<definition name="*/" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/jsp/{1}/index.jsp" />
+		<put-attribute name="container" value="main-wrap" />
+	</definition>
+
+</tiles-definitions>

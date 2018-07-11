@@ -1,0 +1,40 @@
+jdbc:
+  environment:
+    poolSize: 15
+    maxPoolSize: 15
+    minPoolSize: 15
+  atomikos:
+    tmUniqueName: @atomikos.tmUniqueName@
+  jta:
+    com.atomikos.icatch.service: com.atomikos.icatch.standalone.UserTransactionServiceFactory
+    com.atomikos.icatch.max_timeout: 300000
+    com.atomikos.icatch.default_jta_timeout: 10000
+    com.atomikos.icatch.max_actives: 50
+    com.atomikos.icatch.enable_logging: true
+    com.atomikos.icatch.serial_jta_transactions: true
+    com.atomikos.icatch.force_shutdown_on_vm_exit: false
+    com.atomikos.icatch.log_base_name: @atomikos.logBaseName@
+    com.atomikos.icatch.log_base_dir: /home/ec2-user/logs/tomcatlog/
+    com.atomikos.icatch.checkpoint_interval: 500
+    com.atomikos.icatch.threaded_2pc: true
+mybatis:
+  typeAliasesPackage: com.template.repository
+  configLocation: classpath:config/mybatis-config.xml
+  mapperLocations:
+    - classpath*:/mapper/*.xml
+    - classpath*:com/template/repository/**/*Mapper.xml
+  failFast: true
+defaultDatasource: templateMySql
+datasource:
+  templateMySql:
+    url: @templateMySql.jdbc.url@
+    userid: @templateMySql.jdbc.id@
+    password: @templateMySql.jdbc.pass@
+    base: mysql
+defaultDatasource2: templateMsSql
+datasource2:
+  templateMsSql:
+    url: @templateMsSql.jdbc.url@
+    userid: @templateMsSql.jdbc.id@
+    password: @templateMsSql.jdbc.pass@
+    base: mssql

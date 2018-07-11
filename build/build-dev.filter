@@ -1,0 +1,2 @@
+servers.url.process-server=http://ec2-13-125-236-127.ap-northeast-2.compute.amazonaws.com:8080
+servers.url.board-server=http://ec2-13-125-227-174.ap-northeast-2.compute.amazonaws.com:8080

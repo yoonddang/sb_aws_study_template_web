@@ -1,0 +1,2 @@
+servers.url.process-server=http:/.template.rocess-66444943.ap-northeast-2.elb.amazonaws.com
+servers.url.board-server=http:/.template.oard-1446011898.ap-northeast-2.elb.amazonaws.com
