@@ -5,6 +5,6 @@ pageEncoding="UTF-8" %>
 
 <header>
     <article class="inner-wrap">
-      <h1><a href="/"><img src="/img/layout/logo.png" alt=""/></a></h1>
+      <h1><a href="/">홈으로 돌아가기</a></h1>
     </article>
 </header>

@@ -39,9 +39,11 @@
 		<tiles:insertAttribute name="footer" />
 	</div>
 </div>
+<%--
 <div id="popup-wrap">
 	<tiles:insertAttribute name="popup" />
 </div>
+--%>
 
 
 

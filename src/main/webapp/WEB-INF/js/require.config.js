@@ -18,7 +18,7 @@ var module = {
         'TweenMax':{deps:['jquery']},
         'cusScroll':{deps:['jquery']},
         'layout':{deps:['cusScroll']},
-        'dev':{deps:['layout', 'join', 'bill', 'default']},
+        'dev':{deps:['layout', 'join']},
         'ui':{deps:['slick', 'layout']},
     }
 };

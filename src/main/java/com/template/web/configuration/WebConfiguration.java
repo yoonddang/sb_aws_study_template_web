@@ -24,16 +24,16 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 		registry.addResourceHandler("/scss/**").addResourceLocations("/WEB-INF/scss/");
 		registry.addResourceHandler("/font/**").addResourceLocations("/WEB-INF/css/font/");
 		registry.addResourceHandler("/tui/**").addResourceLocations("/WEB-INF/css/tui/");
-		//registry.addResourceHandler("/img/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com.template.esource/");
-		registry.addResourceHandler("/img/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com.template.esource/pc/images/");
-		registry.addResourceHandler("/fonts/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com.template.esource/pc/fonts/");
+		//registry.addResourceHandler("/img/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com/hanteoresource/");
+		registry.addResourceHandler("/img/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com/hanteoresource/pc/images/");
+		registry.addResourceHandler("/fonts/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com/hanteoresource/pc/fonts/");
 
-		registry.addResourceHandler("/image/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com.template.esource/");
+		registry.addResourceHandler("/image/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com/hanteoresource/");
 		registry.addResourceHandler("/images/**").addResourceLocations("/WEB-INF/css/images/");
 		registry.addResourceHandler("/favicon.ico").addResourceLocations("/favicon.ico");
 
 
-		registry.addResourceHandler("/promo/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com.template.esource/promotion/");
+		registry.addResourceHandler("/promo/**").addResourceLocations("https://s3.ap-northeast-2.amazonaws.com/hanteoresource/promotion/");
 	}
 
 	@Override

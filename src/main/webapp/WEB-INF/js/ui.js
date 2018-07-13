@@ -227,24 +227,10 @@ var ui = (function (){
         // dev
         mainBoardList();
 
-        joinCertify();
-        joinFormValidation();
-        mypageBtn();
-
-        searchMoreBtn();
-        listTenMoreBtn();
         headerTopLoginBtn();
-        qnaToggleList();
-
         replyBtnControl();
         initBoard();
 
-        enterPress();
-        snsShare();
-
-
-        initSearchPage();
-        loadCalendar();
 
         mainVisual();
     }
